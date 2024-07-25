@@ -1,0 +1,31 @@
+package com.Ashish.All.Array;
+
+import java.util.Scanner;
+
+public class Prime_Upto_n {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number 1 to : ");
+        int n1 = sc.nextInt();
+        if (n1<=1){
+            System.out.println("Invalid input");
+        }
+        else {
+            prime(n1);
+        }
+    }
+    static void prime(int num){
+
+        for (int i=2 ; i<=num;i++){
+            int count = 0;
+            for (int j = 1 ; j<=i ; j++) {
+                if (i % j == 0) {
+                    count++;
+                }
+            }
+                if (count == 2){
+                    System.out.println(i+" ");
+                }
+            }
+        }
+    }
